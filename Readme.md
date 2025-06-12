@@ -258,7 +258,7 @@ Common error messages:
 This project is licensed under the MIT License.
 
 ## Deployment Address
-
+The contract will be deployed at address 0x0206b36d6626c1d2c01cfee4885043b8b10ee27d69153086997166177a33bba3
 
 ## Support
 

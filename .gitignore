@@ -4,3 +4,7 @@ snfoundry_trace/
 coverage/
 profile/
 .DS_Store
+
+account0_account.json
+account0_keystore.json
+token_sales/token-sale-sn-africa/target/dev/token_sale_TokenSale.contract_class.json
