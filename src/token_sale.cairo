@@ -45,7 +45,7 @@ mod TokenSale {
         self.ownable.initializer(owner);
         self.accepted_payment_token.write(accepted_payment_token);
     }
-
+    #[abi(embed_v0)]
     impl TokenSaleImpl of ITokenSale<ContractState> {
         fn check_available_token(self: @ContractState, token_address: ContractAddress) -> u256 {
             let token = IERC20Dispatcher { contract_address: token_address };
@@ -82,7 +82,7 @@ mod TokenSale {
 
             assert(buyer_balance >= buying_price, 'insufficient funds');
 
-            payment_token.transfer_from(buyer, get_contract_address(), buying_price);
+            // payment_token.transfer_from(buyer, get_contract_address(), buying_price);
             let total_contract_balance = self.tokens_available_for_sale.entry(token_address).read();
             token_to_buy.transfer(buyer, total_contract_balance);
         }
